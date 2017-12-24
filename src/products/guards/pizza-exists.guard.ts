@@ -33,7 +33,7 @@ export class PizzaExistsGuard implements CanActivate {
   }
 
   checkStore(): Observable<boolean> {
-    return this.store.select(fromStore.getAllPizzasLoaded).pipe(
+    return this.store.select(fromStore.getPizzasLoaded).pipe(
       tap(loaded => {
         if (!loaded) {
           this.store.dispatch(new fromStore.LoadPizzas());

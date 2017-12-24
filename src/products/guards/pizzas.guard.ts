@@ -21,7 +21,7 @@ export class PizzasGuard implements CanActivate {
   }
 
   checkStore(): Observable<boolean> {
-    return this.store.select(fromStore.getAllPizzasLoaded)
+    return this.store.select(fromStore.getPizzasLoaded)
     .pipe(
       tap(loaded => {
         if(!loaded) {
