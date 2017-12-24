@@ -44,7 +44,7 @@ export function reducer(
         entities
       };
     }
-    case fromPizzas.LOAD_PIZZAS: {
+    case fromPizzas.LOAD_PIZZAS_FAIL: {
       return {
         ...state,
         loading: false,
